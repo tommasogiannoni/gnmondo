@@ -6,20 +6,18 @@
       </div>
       <div class="menu">
         <ul>
-          <li>
+          <li class="list-item">
             <NuxtLink to="/" class="text-decoration-none">Events</NuxtLink>
           </li>
-          <li>
+          <li class="list-item">
             <NuxtLink to="/about" class="text-decoration-none">About Us</NuxtLink>
           </li>
         </ul>
-        <div class="line">
-          <hr>
-        </div>
       </div>
     </div>
+    <div class="line">
+    </div>
     <main>
-      <!--img src="~/assets/logognm.png" /-->
       <Nuxt />
     </main>
   </div>
@@ -30,6 +28,7 @@
 .line{
   width: 100%;
   text-align: left;
+  border-top: 3px solid #D8D2CB;
 }
 .logo {
   transition: 0s;
@@ -44,12 +43,17 @@
 .menu{
   margin-bottom: 50px;
 }
+.list-item{
+  border-bottom-style: solid;
+  border-bottom-color: #1C658C;
+}
+
 a.nuxt-link-active {
   font-weight: bold;
 }
 /* exact link will show the primary color for only the exact matching link */
 a.nuxt-link-exact-active {
-  color: #00c58e;
+  color: #1C658C;
 }
 
 body {
@@ -83,9 +87,7 @@ li {
   font-size: 1.2rem;
 }
 
-nav {
-  padding: 0 1rem;
-}
+
 
 a,
 a:visited {
@@ -94,7 +96,7 @@ a:visited {
 }
 
 a:hover {
-  color: #00c58e;
+  color: #D8D2CB;
 }
 
 
