@@ -13,6 +13,9 @@
             <NuxtLink to="/about" class="text-decoration-none">About Us</NuxtLink>
           </li>
         </ul>
+        <div class="line">
+          <hr>
+        </div>
       </div>
     </div>
     <main>
@@ -24,7 +27,10 @@
 
 <style>
 /* home route and active route will show in bold as it matches / and /about */
-
+.line{
+  width: 100%;
+  text-align: left;
+}
 .logo {
   transition: 0s;
   margin-bottom: 0px; 
@@ -36,7 +42,7 @@
   -webkit-transition: transform 1s ease-in-out;
 }
 .menu{
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 a.nuxt-link-active {
   font-weight: bold;
