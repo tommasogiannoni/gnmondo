@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 style="margin-bottom: 10px">Giovani del nuovo mondo 👋</h1>
-    <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi del mese</h4>
+    <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi di {{mese}}</h4>
     
     <div class="div-card" v-for="event in events" >
             <b-card 
@@ -10,6 +10,7 @@
               :header="event.type"
               align="center"
               >
+              <b-card-text class="card-date">{{event.date}}</b-card-text>
               <b-card-text class="card-body">{{event.description}}</b-card-text>
             </b-card>       
     </div>
@@ -23,10 +24,39 @@ import axios from 'axios'
 export default {
     data() {
       return {
-        events: []
+        events: [],
+        mese: ""
       }
     },
+
+    methods:{
+      getUnits: function() {
+        axios.get(`http://localhost:8080/events`)
+          .then(response => {
+            // JSON responses are automatically parsed.
+            //this.events = response.data
+            this.events = response.data;
+            console.log(events);
+          })
+          .catch(e => {
+            console.log(e);
+          })
+      }
+    },
+    beforeMount(){
+        this.getUnits()
+    },
+    
+    // on page change 
     async fetch() {
+      axios.get(`http://localhost:8080/month`)
+          .then(response => {
+            this.mese = response.data.month;
+            console.log(mese);
+          })
+          .catch(e => {
+            console.log(e);
+          })
       axios.get(`http://localhost:8080/events`)
           .then(response => {
             // JSON responses are automatically parsed.
@@ -58,11 +88,13 @@ export default {
   justify-content: center;
   display: flex;
   flex-flow: column;
+  background-color: #EEEEEE !important;
 }
 
 
 .card-header {
-  background-color: #D8D2CB !important;
+  background-color: #398AB9 !important;
+  color: white
 }
 
 </style>

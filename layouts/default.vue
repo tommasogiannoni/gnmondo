@@ -7,10 +7,13 @@
       <div class="menu">
         <ul>
           <li class="list-item">
-            <NuxtLink to="/" class="text-decoration-none">Events</NuxtLink>
+            <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
           </li>
           <li class="list-item">
-            <NuxtLink to="/about" class="text-decoration-none">About Us</NuxtLink>
+            <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
+          </li>
+          <li class="list-item">
+            <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
           </li>
         </ul>
       </div>
