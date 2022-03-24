@@ -3,18 +3,21 @@
     <h1>Gestione Eventi 🎉</h1>
     <div>
         <div class="div-table">
-            <b-table hover :items="events" :fields="fields">
+            <b-table hover :items="events" :fields="fields" show-empty>
                 <template #cell(show_details)="row">
-                    <b-button size="sm" @click="row.toggleDetails" class="mr-2">
+                    <b-button size="sm" @click="modifica(row)" class="mr-2">
                         Modifica
                     </b-button>
-                    <b-button size="sm" @click="row.toggleDetails" class="mr-2" style="background-color: red;">
+                    <b-button size="sm" @click="elimina(row)" class="mr-2" style="background-color: red;">
                         Elimina
                     </b-button>
                 </template>
+                <template #empty="scope">
+                    <p>Non sono stati trovati eventi</p>
+                </template>
             </b-table>
         </div>
-        <b-button size="sm" @click="click()" class="mr-2" style="background-color: green;">Aggiungi Evento</b-button>
+        <b-button size="sm" @click="click()" class="mr-2" style="background-color: #398AB9;">Aggiungi Evento</b-button>
 
         <!-- use the modal component, pass in the prop -->
         <modal :show="showModal" @close="showModal = false" @confirm="postEvent" class="modal">
@@ -25,15 +28,17 @@
                   <b-row class="my-1" style="text-align: left;">
                     <b-col>
                         <label class="input-desc mb-2">Tipo:</label>
-                        <b-form-input id="input-valid" :state="true" placeholder="Inserisci"></b-form-input>
+                        <b-form-input v-model="model.type" placeholder="Inserisci"></b-form-input>
                     </b-col>
                     <b-col>
                         <label class="input-desc mb-2">Data:</label>
-                        <b-form-input id="input-valid" :state="true" placeholder="Inserisci"></b-form-input>
+                        <b-form-input v-model="model.date" placeholder="Inserisci"></b-form-input>
                     </b-col>
+                </b-row>
+                <b-row style="text-align: left; margin-top: 10px" > 
                     <b-col>
                         <label class="input-desc mb-2">Descrizione:</label>
-                        <b-form-input id="input-valid" :state="true" placeholder="Inserisci"></b-form-input>
+                        <b-form-textarea v-model="model.description" max-rows="5" placeholder="Inserisci"></b-form-textarea>
                     </b-col>
                 </b-row>
             </template>
@@ -55,7 +60,8 @@ export default {
         fields: ['type', 'date', 'description', 'show_details'],
         events: [],
         showModal: false,
-        model: {type: ""}
+        model: {type: "", date: "", description: ""},
+        scope: true
       }
     },
 
@@ -65,21 +71,51 @@ export default {
     methods:{
          getUnits: function() {
             axios.get(`http://localhost:8080/events`)
-            .then(response => {
-                // JSON responses are automatically parsed.
-                //this.events = response.data
-                this.events = response.data;
-                console.log(events);
-            })
-            .catch(e => {
-                console.log(e);
-            })
+                .then(response => {
+                    // JSON responses are automatically parsed.
+                    //this.events = response.data
+                    this.events = response.data;
+                    console.log(this.events);
+                })
+                .catch(e => {
+                    this.scope = true;
+                    console.log(e);
+                })
         },
         click() {
             this.showModal = true;
         },
+        elimina(rowItem) {
+            console.log("Elimina: ", rowItem);
+            let req = this.model;
+            axios.delete('http://localhost:8080/event/'+rowItem.item._id, req)
+                .then( res => {
+                    console.log("Res", res);
+                })
+                .catch(e => {
+                    console.log(e);
+                })
+            
+        },
+        modifica(rowItem) {
+           console.log("Modifica: ", rowItem); 
+        },
         postEvent() {
-            console.log("Bella pette");
+            if( this.model.type != "" && this.model.date && this.model.description ) {
+
+                let req = this.model;
+                axios.post(`http://localhost:8080/event`, req)
+                    .then(response => {
+                        // JSON responses are automatically parsed.
+                        //this.events = response.data
+                        this.events = response.data;
+                        this.getUnits();
+                        this.showModal = false;
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+            }
         }
     },
     beforeMount(){

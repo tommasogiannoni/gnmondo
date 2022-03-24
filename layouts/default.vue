@@ -1,30 +1,33 @@
 <template>
-  <div>
-    <div class="container" style="float=right; display: flex; align-items: end; justify-content: space-between;">
-      <div>
-        <img class="logo" src="~/assets/logognm.png" />
+    <div>
+      <div class="container" style="float=right; display: flex; align-items: end; justify-content: space-between;">
+        <div>
+          <img class="logo" src="~/assets/logognm.png" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="list-item">
+              <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
+            </li>
+            <li class="list-item">
+              <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
+            </li>
+            <li class="list-item">
+              <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="menu">
-        <ul>
-          <li class="list-item">
-            <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
-          </li>
-          <li class="list-item">
-            <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
-          </li>
-          <li class="list-item">
-            <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
-          </li>
-        </ul>
+      <div class="line">
       </div>
+      <main>
+        <Nuxt />
+      </main>
     </div>
-    <div class="line">
-    </div>
-    <main>
-      <Nuxt />
-    </main>
-  </div>
 </template>
+
+<script>
+</script>
 
 <style>
 /* home route and active route will show in bold as it matches / and /about */

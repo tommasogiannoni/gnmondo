@@ -26,8 +26,8 @@ export default {
 
           <div class="modal-footer" style="justify-content: space-between;">
             <slot name="footer">
-              <b-button size="sm"class="modal-default-button mr-2" style="background-color: blue" @click="$emit('close')">Annulla</b-button>
-              <b-button size="sm"class="modal-default-button" @click="$emit('confirm')" style="background-color: green">Conferma</b-button>
+              <b-button variant="light" size="sm"class="modal-default-button mr-2" @click="$emit('close')">Annulla</b-button>
+              <b-button size="sm"class="modal-default-button" @click="$emit('confirm')" style="background-color: #398AB9">Conferma</b-button>
             </slot>
           </div>
         </div>
