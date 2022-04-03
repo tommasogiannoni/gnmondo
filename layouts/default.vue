@@ -1,30 +1,41 @@
 <template>
-  <div>
-    <div class="container" style="float=right; display: flex; align-items: end; justify-content: space-between;">
-      <div>
-        <img class="logo" src="~/assets/logognm.png" />
+    <div>
+      <div class="container" style="float=right; display: flex; align-items: end; justify-content: space-between;">
+        <div>
+          <img class="logo" src="~/assets/logognm.png" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="list-item">
+              <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
+            </li>
+            <li class="list-item">
+              <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
+            </li>
+            <li class="list-item">
+              <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="menu">
-        <ul>
-          <li>
-            <NuxtLink to="/" class="text-decoration-none">Events</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/about" class="text-decoration-none">About Us</NuxtLink>
-          </li>
-        </ul>
+      <div class="line">
       </div>
+      <main>
+        <Nuxt />
+      </main>
     </div>
-    <main>
-      <!--img src="~/assets/logognm.png" /-->
-      <Nuxt />
-    </main>
-  </div>
 </template>
+
+<script>
+</script>
 
 <style>
 /* home route and active route will show in bold as it matches / and /about */
-
+.line{
+  width: 100%;
+  text-align: left;
+  border-top: 3px solid #D8D2CB;
+}
 .logo {
   transition: 0s;
   margin-bottom: 0px; 
@@ -36,14 +47,19 @@
   -webkit-transition: transform 1s ease-in-out;
 }
 .menu{
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
+.list-item{
+  border-bottom-style: solid;
+  border-bottom-color: #1C658C;
+}
+
 a.nuxt-link-active {
   font-weight: bold;
 }
 /* exact link will show the primary color for only the exact matching link */
 a.nuxt-link-exact-active {
-  color: #00c58e;
+  color: #1C658C;
 }
 
 body {
@@ -77,9 +93,7 @@ li {
   font-size: 1.2rem;
 }
 
-nav {
-  padding: 0 1rem;
-}
+
 
 a,
 a:visited {
@@ -88,7 +102,7 @@ a:visited {
 }
 
 a:hover {
-  color: #00c58e;
+  color: #D8D2CB;
 }
 
 
