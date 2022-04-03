@@ -20,6 +20,39 @@
 
 <script>
 
+let jsonEvents = [
+   {
+      "_id":"62379a91ecefe08f59ceb2a8",
+      "type":"dxczv",
+      "date":"xczvxc",
+      "description":"zxcvxc"
+   },
+   {
+      "_id":"62379bae4b6fb88ea3d907cb",
+      "type":"Cena",
+      "date":"23-03-2022",
+      "description":"CEna a base di pizza ore 21.00"
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Festa",
+      "date":"29-03-2022",
+      "description":"DJ set e karaoke"
+   },
+   {
+      "_id":"623b7ca63503b28e8b6c7590",
+      "type":"Cena",
+      "date":"31-03-2022",
+      "description":"Cena presso ristorante Vegano Raw Vegan - Firenze ore 21.30"
+   },
+   {
+      "_id":"623c4764d6b03815673dbebc",
+      "type":"Riunione",
+      "date":"03/04/2022",
+      "description":"Riunione organizzativa ore 21.30"
+   }
+]
+
 import axios from 'axios'
 export default {
     data() {
@@ -31,7 +64,7 @@ export default {
 
     methods:{
       getUnits: function() {
-        axios.get(`http://localhost:8080/events`)
+        /*axios.get(`http://localhost:8080/events`)
           .then(response => {
             // JSON responses are automatically parsed.
             //this.events = response.data
@@ -40,7 +73,8 @@ export default {
           })
           .catch(e => {
             console.log(e);
-          })
+          })*/
+          this.events = jsonEvents;
       }
     },
     beforeMount(){
@@ -49,15 +83,16 @@ export default {
     
     // on page change 
     async fetch() {
-      axios.get(`http://localhost:8080/month`)
+      /*axios.get(`http://localhost:8080/month`)
           .then(response => {
             this.mese = response.data.month;
             console.log(mese);
           })
           .catch(e => {
             console.log(e);
-          })
-      axios.get(`http://localhost:8080/events`)
+          })*/
+          this.mese = 'Aprile';
+      /*axios.get(`http://localhost:8080/events`)
           .then(response => {
             // JSON responses are automatically parsed.
             //this.events = response.data
@@ -66,7 +101,8 @@ export default {
           })
           .catch(e => {
             console.log(e);
-          })
+          })*/
+          this.events = jsonEvents;
     }
 }
 </script>
