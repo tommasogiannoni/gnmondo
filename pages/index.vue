@@ -23,33 +23,57 @@
 let jsonEvents = [
    {
       "_id":"62379a91ecefe08f59ceb2a8",
-      "type":"dxczv",
-      "date":"xczvxc",
-      "description":"zxcvxc"
+      "type":"Riunione",
+      "date":"8 Aprile 2022",
+      "description":"Sera dopo cena: evento Francesco Cappello a Lucca ( sistemi economici alternativi ). Necessità di prenotazione, dare conferma entro 01/04."
    },
    {
       "_id":"62379bae4b6fb88ea3d907cb",
-      "type":"Cena",
-      "date":"23-03-2022",
-      "description":"CEna a base di pizza ore 21.00"
+      "type":"Giornata",
+      "date":"9 Aprile 2022",
+      "description":"Pomeriggio: Villone – incontro sempliceSera: festa di compleanno a casa Maltinti."
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Festa",
-      "date":"29-03-2022",
-      "description":"DJ set e karaoke"
-   },
-   {
-      "_id":"623b7ca63503b28e8b6c7590",
-      "type":"Cena",
-      "date":"31-03-2022",
-      "description":"Cena presso ristorante Vegano Raw Vegan - Firenze ore 21.30"
-   },
-   {
-      "_id":"623c4764d6b03815673dbebc",
       "type":"Riunione",
-      "date":"03/04/2022",
-      "description":"Riunione organizzativa ore 21.30"
+      "date":"15 Aprile 2022",
+      "description":"Riunione serale casa Maltinti"
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Giornata",
+      "date":"16 Aprile 2022",
+      "description":"Gita fuori porta da mattina a sera Firenze, volendo cena presso Raw Vegan"
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Giornata",
+      "date":"18 Aprile 2022",
+      "description":"Gita fuori porta da mattina a sera al mare, pranzo al sacco"
+   },
+    {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Evento",
+      "date":"22 Aprile 2022",
+      "description":"Aperitivo alle 18 luogo da definire, e-o uscita post cena"
+   },
+    {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Giornata",
+      "date":"23 Aprile 2022",
+      "description":"Girata da mattina a sera: Trekking ed escursione conLeonardo."
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Giornata",
+      "date":"25 Aprile 2022",
+      "description":"Girata da mattina a sera o solo pomeridiana, luogo da definire ( idea Acquerino, Montagna Pistoiese o Lucca sulle mura)."
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Evento",
+      "date":"30 Aprile 2022",
+      "description":"Villone nel pomeriggio (o Stalla), Sera: festa di compleanno alla Stalla"
    }
 ]
 
