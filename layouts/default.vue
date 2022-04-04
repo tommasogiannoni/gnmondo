@@ -1,10 +1,10 @@
 <template>
     <div>
-      <div class="container" style="float=right; display: flex; align-items: end; justify-content: space-between;">
-        <div>
+      <div class="container" style="">
+        <div style="text-align: center;">
           <img class="logo" src="~/assets/logognm.png" />
         </div>
-        <div class="menu">
+        <div class="row menu">
           <ul>
             <li class="list-item">
               <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
@@ -23,6 +23,14 @@
       <main>
         <Nuxt />
       </main>
+      <div class="footer">
+        <div class="row">
+          <span style="font-weight: lighter;"><span style="font-weight: bolder;">Copyright ©</span> GNM 2022 Tutti i diritti riservati</span>
+        </div>
+        <div class="row">
+          <span>Powered by <b-link href="">Link</b-link></span>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -40,7 +48,7 @@
   transition: 0s;
   margin-bottom: 0px; 
   margin-top: 30px; 
-  width: 20%;
+  width: 10rem;
 }
 .logo:hover {
   transform: scale(1.2);
@@ -103,6 +111,16 @@ a:visited {
 
 a:hover {
   color: #D8D2CB;
+}
+.footer {
+  width: 100%;
+  background-color: #D8D2CB;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  font-size: 12px;
 }
 
 
