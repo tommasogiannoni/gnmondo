@@ -28,7 +28,7 @@
           <span style="font-weight: lighter;"><span style="font-weight: bolder;">Copyright ©</span> GNM 2022 Tutti i diritti riservati</span>
         </div>
         <div class="row">
-          <span>Powered by <b-link href="">Link</b-link></span>
+          <span>Powered by <b-link href="">***</b-link></span>
         </div>
       </div>
     </div>
@@ -49,6 +49,7 @@
   margin-bottom: 0px; 
   margin-top: 30px; 
   width: 10rem;
+  margin-right: 5px;
 }
 .logo:hover {
   transform: scale(1.2);
