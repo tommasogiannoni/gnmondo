@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <h1 style="margin-bottom: 10px">👋Giovani Nuovo Mondo👋</h1>
+    <h1 style="margin-bottom: 10px">Giovani Nuovo Mondo</h1>
+    <h3 style="margin-bottom: 10px">😎</h3>
     <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi di <span style="font-weight:bolder">{{mese}}</span></h4>
     <div class="div-card" v-for="event in events" v-on:click="select($event)">
             <b-card 
