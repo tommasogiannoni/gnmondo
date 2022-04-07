@@ -1,5 +1,7 @@
 # giovani-nuovo-mondo
 
+# 😎 Giovani Nuovo Mondo 😎
+
 ## Build Setup
 
 ```bash
