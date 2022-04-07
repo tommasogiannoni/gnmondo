@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <h1 style="margin-bottom: 10px">Giovani del nuovo mondo 👋</h1>
-    <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi di {{mese}}</h4>
-    
-    <div class="div-card" v-for="event in events" >
+    <h1 style="margin-bottom: 10px">👋 Giovani Nuovo Mondo 👋</h1>
+    <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi di <span style="font-weight:bolder">{{mese}}</span></h4>
+    <div class="div-card" v-for="event in events" v-on:click="select($event)">
             <b-card 
               class="card-plus" 
               border-variant="" 
@@ -14,12 +13,10 @@
               <b-card-text class="card-body">{{event.description}}</b-card-text>
             </b-card>       
     </div>
-</div>
   </div>
 </template>
 
 <script>
-
 let jsonEvents = [
    {
       "_id":"62379a91ecefe08f59ceb2a8",
@@ -99,6 +96,9 @@ export default {
             console.log(e);
           })*/
           this.events = jsonEvents;
+      },
+      select: function(event) { 
+        console.log("Ciaooooo", event); // returns 'foo'
       }
     },
     beforeMount(){
@@ -132,25 +132,50 @@ export default {
 </script>
 <style>
 .div-card {
+  border-radius:30px !important;
   display: flex; 
   justify-content: center; 
   flex-flow: wrap;
   margin-bottom: 60px;
+  transition: transform .2s; /* Animation */
 }
+.div-card:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 .card-plus {
+  border-radius:30px !important;
   width: 800px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-color: #1C658C !important;
   font-size: x-large;
 }
 .card-body{
+  border-bottom-right-radius:30px !important;
+  border-bottom-left-radius:30px !important;
   justify-content: center;
   display: flex;
   flex-flow: column;
   background-color: #EEEEEE !important;
 }
+.card-header {
+  border-top-right-radius:30px !important;
+  border-top-left-radius:30px !important;
+  height: 80px;  
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-weight: bold;
+  font-size: larger;
+  text-shadow: -1px 0 black, 0 3px black, 0px 0 black, 0 0px black;
 
-
+}
+.card-date {
+  font-weight: lighter;
+}
+.card-footer {
+   border-radius:30px !important;
+}
 .card-header {
   background-color: #398AB9 !important;
   color: white
