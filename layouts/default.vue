@@ -25,7 +25,7 @@
       </main>
       <div class="footer">
         <div class="row">
-          <span style="font-weight: lighter;"><span style="font-weight: bolder;">Copyright ©</span> GNM 2022 Tutti i diritti riservati</span>
+          <span style="font-weight: lighter;">Copyright © <span style="font-weight: bolder;">GNM 2022</span> Tutti i diritti riservati</span>
         </div>
         <div class="row">
           <span>Powered by <b-link href="">***</b-link></span>
