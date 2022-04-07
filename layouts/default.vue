@@ -1,28 +1,32 @@
 <template>
     <div>
-      <div class="container" style="">
-        <div style="text-align: center;">
-          <img class="logo" src="~/assets/logognm.png" />
+      <div class="header">
+        <div class="container" style="">
+          <div style="text-align: center;">
+            <img class="logo" src="~/assets/logognm.png" />
+          </div>
+          <div class="row menu">
+            <ul>
+              <li class="list-item">
+                <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
+              </li>
+              <!--li class="list-item">
+                <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
+              </li-->
+              <li class="list-item">
+                <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="row menu">
-          <ul>
-            <li class="list-item">
-              <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
-            </li>
-            <!--li class="list-item">
-              <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
-            </li-->
-            <li class="list-item">
-              <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
-            </li>
-          </ul>
+        <div class="line">
         </div>
       </div>
-      <div class="line">
+      <div class="body">
+        <main>
+          <Nuxt />
+        </main>
       </div>
-      <main>
-        <Nuxt />
-      </main>
       <div class="footer">
         <div class="row">
           <span style="font-weight: lighter;">Copyright © <span style="font-weight: bolder;">GNM 2022</span> Tutti i diritti riservati</span>
@@ -122,6 +126,17 @@ a:hover {
   display: flex;
   flex-flow: column;
   font-size: 12px;
+}
+.header {
+  top:0;
+  position: fixed; /*remove to disable locked header*/
+  width: 100%;
+  z-index: 999;
+  height: 365px;   
+  background: #EEEEEE;
+}
+.body {
+  margin-top: 420px; /*remove if disabled locked header by removing position:fixed on header*/
 }
 
 
