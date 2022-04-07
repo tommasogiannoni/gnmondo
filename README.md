@@ -1,8 +1,6 @@
-# giovani-nuovo-mondo
-
 # 😎 Giovani Nuovo Mondo 😎
 
-## Build Setup
+## Build Setup giovani-nuovo-mondo
 
 ```bash
 # install dependencies
@@ -20,4 +18,5 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+
 
