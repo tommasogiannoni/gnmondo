@@ -1,7 +1,7 @@
 # 😎 Giovani Nuovo Mondo 😎
 
 Inline-style: 
-![alt text](https://github.com/tommasogiannoni/gnmondo/main/assets/logognmICO.ico)
+![alt text](https://github.com/tommasogiannoni/gnmondo/blob/main/assets/logognmICO.ico)
 
 ## Build Setup giovani-nuovo-mondo
 
