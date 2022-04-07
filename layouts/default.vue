@@ -129,14 +129,14 @@ a:hover {
 }
 .header {
   top:0;
-  position: fixed; /*remove to disable locked header*/
+  /*position: fixed; /*remove to disable locked header*/
   width: 100%;
   z-index: 999;
   height: 365px;   
   background: #EEEEEE;
 }
 .body {
-  margin-top: 420px; /*remove if disabled locked header by removing position:fixed on header*/
+  /*margin-top: 420px; /*remove if disabled locked header by removing position:fixed on header*/
 }
 
 
