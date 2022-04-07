@@ -1,7 +1,7 @@
 # 😎 Giovani Nuovo Mondo 😎
 ![alt text](https://github.com/tommasogiannoni/gnmondo/blob/main/assets/logognmICO.ico)
-### Sito ufficale dei Giovani del nuovo mondo.
-### Utilizzato per la condivisione a scopo informativo degli eventi mensili del gruppo.
+#### Sito ufficale dei Giovani del nuovo mondo.
+#### Utilizzato per la condivisione a scopo informativo degli eventi mensili del gruppo.
 
 ## Build Setup giovani-nuovo-mondo
 
