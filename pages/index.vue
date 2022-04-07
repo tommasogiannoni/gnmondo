@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 style="margin-bottom: 10px">👋 Giovani Nuovo Mondo 👋</h1>
+    <h1 style="margin-bottom: 10px">👋Giovani Nuovo Mondo👋</h1>
     <h4 style="margin-bottom: 60px; font-weight: lighter;">Eventi di <span style="font-weight:bolder">{{mese}}</span></h4>
     <div class="div-card" v-for="event in events" v-on:click="select($event)">
             <b-card 
@@ -167,7 +167,7 @@ export default {
   align-items: center;
   font-weight: bold;
   font-size: larger;
-  text-shadow: -1px 0 black, 0 3px black, 0px 0 black, 0 0px black;
+  text-shadow: -1px 0 black, 0 2px black, 0px 0 black, 0 0px black;
 
 }
 .card-date {
