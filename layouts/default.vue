@@ -108,7 +108,7 @@ export default {
   margin-bottom: 0px; 
   margin-top: 30px; 
   width: 10rem;
-  margin-right: 5px;
+  
 }
 .logo:hover {
   transform: scale(1.2);
