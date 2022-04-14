@@ -1,32 +1,38 @@
 <template>
-    <div>
+    <div class="body">
+
       <div class="header">
-        <div class="container" style="">
+        <div class="container">
           <div style="text-align: center;">
             <img class="logo" src="~/assets/logognm.png" />
           </div>
-          <div class="row menu">
-            <ul>
-              <li class="list-item">
-                <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
-              </li>
-              <!--li class="list-item">
-                <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
-              </li-->
-              <li class="list-item">
-                <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
-              </li>
-            </ul>
-          </div>
+        </div>
+      </div>
+
+      <div class="locked-header" id="myHeader">
+        <div class="row menu">
+              <ul>
+                <li class="list-item">
+                  <NuxtLink to="/" class="text-decoration-none">Eventi</NuxtLink>
+                </li>
+                <!--li class="list-item">
+                  <NuxtLink to="/backoffice" class="text-decoration-none">Back-office</NuxtLink>
+                </li-->
+                <li class="list-item">
+                  <NuxtLink to="/about" class="text-decoration-none">Chi Siamo</NuxtLink>
+                </li>
+              </ul>
         </div>
         <div class="line">
         </div>
       </div>
-      <div class="body">
+
+      <div class="main">
         <main>
           <Nuxt />
         </main>
       </div>
+
       <div class="footer">
         <div class="row">
           <span style="font-weight: lighter;">Copyright © <span style="font-weight: bolder;">GNM 2022</span> Tutti i diritti riservati</span>
@@ -35,13 +41,62 @@
           <span>Powered by <b-link href="">***</b-link></span>
         </div>
       </div>
+
     </div>
 </template>
 
 <script>
+export default {
+
+  mounted() {
+    window.addEventListener("scroll", this.onScroll)
+    this.$refs.myHeader
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll)
+  },
+  methods: {
+    onScroll(e) {
+      //this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      var topMargin = 190;
+      
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } 
+      if ( window.pageYOffset < topMargin) {
+        header.classList.remove("sticky");
+      }
+      
+      
+    }
+  }
+}
 </script>
 
 <style>
+.locked-header {
+  background: #EEEEEE;
+  .menu{
+    margin-bottom: 50px;
+  }
+}
+.header {
+  /*position: fixed; /*remove to disable locked header*/
+  background: #EEEEEE;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sticky + .main {
+  padding-top: 50px;
+}
+
 /* home route and active route will show in bold as it matches / and /about */
 .line{
   width: 100%;
@@ -59,9 +114,7 @@
   transform: scale(1.2);
   -webkit-transition: transform 1s ease-in-out;
 }
-.menu{
-  margin-bottom: 50px;
-}
+
 .list-item{
   border-bottom-style: solid;
   border-bottom-color: #1C658C;
@@ -76,16 +129,17 @@ a.nuxt-link-exact-active {
 }
 
 body {
+
+}
+
+.main {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  margin: 0;
-}
 
-main {
   margin: 0 auto;
   padding: 0 1rem;
-  margin-top: 100px;
+  margin-top: 50px;
   max-width: 1280px;
   text-align: center;
 }
@@ -126,17 +180,6 @@ a:hover {
   display: flex;
   flex-flow: column;
   font-size: 12px;
-}
-.header {
-  top:0;
-  /*position: fixed; /*remove to disable locked header*/
-  width: 100%;
-  z-index: 999;
-  height: 365px;   
-  background: #EEEEEE;
-}
-.body {
-  /*margin-top: 420px; /*remove if disabled locked header by removing position:fixed on header*/
 }
 
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="margin-bottom: 40px;">✨Qualcosa su di noi✨</h1>
+    <h1 style="margin-bottom: 40px;">Qualcosa su di noi</h1>
     <div>
       <h4 style="margin-bottom: 60px; margin-left: 20px; margin-right: 20px; font-weight: lighter;">
         <p>
