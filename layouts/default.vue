@@ -129,7 +129,7 @@ a.nuxt-link-exact-active {
 }
 
 body {
-
+  overflow-x: hidden;
 }
 
 .main {
