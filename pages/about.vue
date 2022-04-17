@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 style="margin-bottom: 40px;">Qualcosa su di noi</h1>
+    <h1 style="margin-bottom: 10px">Giovani del Nuovo Mondo</h1>
+    <h3 style="margin-bottom: 10px"></h3>
+    <h4 style="margin-bottom: 60px; font-weight: lighter;">Qualcosa su di noi</span></h4>
     <div>
       <h4 style="margin-bottom: 60px; margin-left: 20px; margin-right: 20px; font-weight: lighter;">
         <p>
