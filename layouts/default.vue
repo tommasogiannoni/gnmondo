@@ -127,9 +127,12 @@ a.nuxt-link-active {
 a.nuxt-link-exact-active {
   color: #1C658C;
 }
-
+html, body {
+   overflow-x: hidden;
+}
 body {
-  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .main {
