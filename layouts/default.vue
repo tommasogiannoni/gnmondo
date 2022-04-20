@@ -159,7 +159,7 @@ li {
 a,
 a:visited {
   text-decoration: none;
-  color: grey;
+  color: #D8D2CB;
   font-weight: bold;
 }
 a.nuxt-link-active {
@@ -171,7 +171,7 @@ a.nuxt-link-exact-active {
   font-weight: bold;
 }
 a:hover {
-  color: #D8D2CB;
+  color: #1C658C;
 }
 
 .footer {
