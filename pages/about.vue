@@ -2,11 +2,11 @@
   <div>
     <h1 style="margin-bottom: 10px">Giovani del Nuovo Mondo</h1>
     <h3 style="margin-bottom: 10px"></h3>
-    <h4 style="margin-bottom: 60px; font-weight: lighter;">Qualcosa su di noi</span></h4>
+    <h4 style="margin-bottom: 60px; font-weight: lighter; font-size: 26px;">Qualcosa su di noi</span></h4>
     <div>
       <h4 style="margin-bottom: 60px; margin-left: 20px; margin-right: 20px; font-weight: lighter;">
         <p>
-          Il gruppo <span style="font-style: italic;">Giovani Nuovo Mondo</span> nasce con lo scopo di confrontarsi 
+          Il gruppo <span style="font-style: italic;">Giovani del Nuovo Mondo</span> nasce con lo scopo di confrontarsi 
           sulle tematiche attuali in modo libero, proprio perché ognuno di 
           noi è un <span style="font-weight: bolder;">libero</span> cittadino del mondo, oltre che provare a combattere 
           concretamente e giorno dopo giorno la società in cui ci troviamo. 

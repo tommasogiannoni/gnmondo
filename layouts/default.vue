@@ -32,7 +32,7 @@
           <Nuxt />
         </main>
       </div>
-
+      
       <div class="footer">
         <div class="row">
           <span style="font-weight: lighter;">Copyright © <span style="font-weight: bolder;">GNM 2022</span> Tutti i diritti riservati</span>
@@ -120,13 +120,6 @@ export default {
   border-bottom-color: #1C658C;
 }
 
-a.nuxt-link-active {
-  font-weight: bold;
-}
-/* exact link will show the primary color for only the exact matching link */
-a.nuxt-link-exact-active {
-  color: #1C658C;
-}
 html, body {
    overflow-x: hidden;
 }
@@ -163,17 +156,24 @@ li {
   font-size: 1.2rem;
 }
 
-
-
 a,
 a:visited {
   text-decoration: none;
-  color: inherit;
+  color: grey;
+  font-weight: bold;
 }
-
+a.nuxt-link-active {
+  font-weight: bold;
+}
+/* exact link will show the primary color for only the exact matching link */
+a.nuxt-link-exact-active {
+  color: #1C658C;
+  font-weight: bold;
+}
 a:hover {
   color: #D8D2CB;
 }
+
 .footer {
   width: 100%;
   background-color: #D8D2CB;
