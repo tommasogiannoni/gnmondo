@@ -1,4 +1,4 @@
-# 😎 Giovani Nuovo Mondo 😎
+# Giovani Nuovo Mondo 
 
 Sito ufficale dei Giovani del nuovo mondo.<br>
 Utilizzato per la condivisione a scopo informativo degli eventi mensili del gruppo
