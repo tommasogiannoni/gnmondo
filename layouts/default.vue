@@ -38,7 +38,7 @@
           <span style="font-weight: lighter;">Copyright © <span style="font-weight: bolder;">GNM 2022</span> Tutti i diritti riservati</span>
         </div>
         <div class="row">
-          <span>Powered by <b-link href="">***</b-link></span>
+          <span>Powered by <b-link href="https://github.com/tommasogiannoni/gnmondo" class="link" target="_blank">***</b-link></span>
         </div>
       </div>
 
@@ -154,6 +154,9 @@ li {
   margin: 0 0.5rem;
   padding: 0.25rem;
   font-size: 1.2rem;
+}
+.link {
+  color: black !important;
 }
 
 a,
