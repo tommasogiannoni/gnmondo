@@ -21,57 +21,69 @@
 let jsonEvents = [
    {
       "_id":"62379a91ecefe08f59ceb2a8",
-      "type":"Riunione",
-      "date":"8 Aprile 2022",
-      "description":"Sera dopo cena: evento Francesco Cappello a Lucca ( sistemi economici alternativi ). Necessità di prenotazione, dare conferma entro 01/04."
+      "type":"Serata",
+      "date":"6 Maggio 2022",
+      "description":"Sera: Street Food Montecatini + bevuta a giro dopo cena."
    },
    {
       "_id":"62379bae4b6fb88ea3d907cb",
-      "type":"Giornata",
-      "date":"9 Aprile 2022",
-      "description":"Pomeriggio: Villone – incontro sempliceSera: festa di compleanno a casa Maltinti."
+      "type":"Svago",
+      "date":"7 Maggio 2022",
+      "description":"Pomeriggio: Villone svago"
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Riunione",
-      "date":"15 Aprile 2022",
-      "description":"Riunione serale casa Maltinti"
+      "type":"Gita",
+      "date":"8 Maggio 2022",
+      "description":"Mattina - pomeriggio: girata fuori porta con pranzo, se disponibile San Quirico più camminata al Borgo."
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Giornata",
-      "date":"16 Aprile 2022",
-      "description":"Gita fuori porta da mattina a sera Firenze, volendo cena presso Raw Vegan"
+      "type":"Serata",
+      "date":"11 Maggio 2022",
+      "description":"Pomeriggio tardo: aperitivo bar Tris/centro Pt + ritrovo casa Giovanni a Pt."
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Giornata",
-      "date":"18 Aprile 2022",
-      "description":"Gita fuori porta da mattina a sera al mare, pranzo al sacco"
+      "type":"Serata",
+      "date":"13 Maggio 2022",
+      "description":"Sera: Aperitivo Montemurlo + giro in centro a Prato dopo cena."
    },
     {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Evento",
-      "date":"22 Aprile 2022",
-      "description":"Aperitivo alle 18 luogo da definire, e-o uscita post cena"
+      "type":"Serata",
+      "date":"14 Maggio 2022",
+      "description":"Sera: riunione+ successivament e festa alla stalla."
    },
     {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Giornata",
-      "date":"23 Aprile 2022",
-      "description":"Girata da mattina a sera: Trekking ed escursione conLeonardo."
+      "type":"Serata",
+      "date":"20 Maggio 2022",
+      "description":"Sera: cena Festa cinghiale a Vicchio di Mugello."
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Giornata",
-      "date":"25 Aprile 2022",
-      "description":"Girata da mattina a sera o solo pomeridiana, luogo da definire ( idea Acquerino, Montagna Pistoiese o Lucca sulle mura)."
+      "type":"Svago",
+      "date":"21 Maggio 2022",
+      "description":"Pomeriggio: partita di pallone ( dare disponibilità entro mercoledì 11 per prenotare un campo ufficiale )."
    },
    {
       "_id":"62379c0c4b6fb88ea3d907cc",
-      "type":"Evento",
-      "date":"30 Aprile 2022",
-      "description":"Villone nel pomeriggio (o Stalla), Sera: festa di compleanno alla Stalla"
+      "type":"Gita",
+      "date":"22 Maggio 2022",
+      "description":"Mattina-sera: giornata al mare, location da decidere."
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Serata",
+      "date":"27 Maggio 2022",
+      "description":"Sera: cena Lucca street food/ristorante + giro dopo cena in centro"
+   },
+   {
+      "_id":"62379c0c4b6fb88ea3d907cc",
+      "type":"Svago & Serata",
+      "date":"28 Maggio 2022",
+      "description":"Pomeriggio: Villone svago. Sera: festa alla stalla."
    }
 ]
 
@@ -116,7 +128,7 @@ export default {
           .catch(e => {
             console.log(e);
           })*/
-          this.mese = 'Aprile';
+          this.mese = 'Maggio';
       /*axios.get(`http://localhost:8080/events`)
           .then(response => {
             // JSON responses are automatically parsed.
